@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 10vh;
+    border-bottom: 1px solid black;
+  }
+  
+  label.logo {
+    color: grey;
+    font-size: 2rem;
+    line-height: 10vh;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    line-height: 10vh;
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  
+  .checkbtn {
+    font-size: 1.6rem;
+    color: black;
+    float: right;
+    line-height: 10vh;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  /* Main Content */
+  .main-content {
+    width: 100%;
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  
+  .left-side,
+  .right-side {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .first-title h1 {
+    font-size: 2rem;
+  }
+  
+  .first-text {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .mail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .email {
+    flex: 1;
+    min-width: 200px;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 3px solid orange;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+  }
+  
+  .try {
+    min-width: 100px;
+    height: 6vh;
+    background-color: orange;
+    border: 3px solid orange;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .try:hover {
+    background-color: darkorange;
+  }
+  
+  .first-little-text {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  /* Right Side Content */
+  .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(207, 207, 207);
+  }
+  
+  .second-title h2 {
+    font-size: 1.7rem;
+  }
+  
+  .second-text,
+  .fourth-text,
+  .second-little-text {
+    font-size: 0.95rem;
+  }
+  
+  .third-title h3 {
+    font-size: 1.2rem;
+  }
+  
+  .text-button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .seperate {
+    font-weight: bold;
+  }
+  
+  .product {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product:hover {
+    background-color: darkorange;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 952px) {
+    label.logo {
+      font-size: 1.6rem;
+      padding-left: 50px;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+  
+    nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: whitesmoke;
+      top: 10vh;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 30px 0;
+      line-height: 2rem;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    .left-side,
+    .right-side {
+      width: 100%;
+      height: auto;
+      padding-bottom: 2rem;
+    }
+  
+    .first-title h1 {
+      font-size: 1.5rem;
+    }
+  
+    .second-title h2,
+    .third-title h3 {
+      font-size: 1.3rem;
+    }
+  
+    .email,
+    .try {
+      width: 100%;
+    }
+  
+    .mail {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
